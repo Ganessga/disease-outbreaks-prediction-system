@@ -8,11 +8,9 @@ st.set_page_config(page_title='Prediction of Disease Outbreaks',
                    layout='wide', 
                    page_icon="🩺")
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-diabetes_model = pickle.load(open(os.path.join(BASE_DIR, "models", "diabetes_model.sav"), 'rb'))
-heart_model = pickle.load(open(os.path.join(BASE_DIR, "models", "heart_model.sav"), 'rb'))
-parkinsons_model = pickle.load(open(os.path.join(BASE_DIR, "models", "parkinsons_model.sav"), 'rb'))
+diabetes_model = pickle.load(open(r"C:\Users\Shalini\OneDrive\Documents\Disease Prediction\saved models\diabetes_model.sav",'rb'))
+heart_model = pickle.load(open(r"C:\Users\Shalini\OneDrive\Documents\Disease Prediction\saved models\heart_model.sav",'rb'))
+parkinsons_model = pickle.load(open(r"C:\Users\Shalini\OneDrive\Documents\Disease Prediction\saved models\parkinsons_model.sav",'rb'))
 
 with st.sidebar:
     selected = option_menu('Prediction of Disease Outbreak System',
